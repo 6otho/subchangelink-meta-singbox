@@ -1110,7 +1110,7 @@ export function configs() {
                 options: [
                     {
                         label: "默认（精简版）[秋风_ads]",
-                        value: "https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/main/template/singbox_default.yaml"
+                        value: "https://raw.githubusercontent.com/6otho/subchangelink-meta-singbox/refs/heads/main/template/singbox_default.yaml"
                     },
                     {
                         label: "PAKO（mini版）[geo_ads]",
