@@ -7,7 +7,7 @@
     },
     "experimental": {
         "clash_api": {
-            "external_controller": "0.0.0.0:9090",
+            "external_controller": "0.0.0.0:20123",
             "external_ui": "ui",
             "secret": "",
             "default_mode": "规则",
@@ -23,10 +23,16 @@
         },
         "cache_file": {
             "enabled": true,
-            "store_fakeip": false
+            "path": "cache.db",
+            "store_fakeip": true
         }
     },
     "dns": {
+        "fakeip": {
+            "enabled": true,
+            "inet4_range": "198.18.0.0/15",
+            "inet6_range": "fc00::/18"
+        },
         "servers": [
             {
                 "tag": "local",
@@ -98,7 +104,7 @@
             "auto_route": true,
             "strict_route": true,
             "endpoint_independent_nat": false,
-            "stack": "system",
+            "stack": "gvisor",
             "platform": {
                 "http_proxy": {
                     "enabled": true,
