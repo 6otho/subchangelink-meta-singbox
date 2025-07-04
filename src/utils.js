@@ -3,7 +3,7 @@ import YAML from 'yaml';
 export const backimg = 'https://t.alcy.cc/ycy';
 export const subapi = 'https://url.v1.mk';
 export const mihomo_top = 'https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/main/Config/Mihomo_lite.yaml';
-export const singbox_1_11 = 'https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/refs/heads/main/Config/singbox_1.11.X.json';
+export const singbox_1_11 = 'https://raw.githubusercontent.com/6otho/subchangelink-meta-singbox/refs/heads/main/Config/singbox_1.11.X.json';
 export const singbox_1_12 = 'https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/refs/heads/main/Config/singbox-1.12.X.json';
 export const singbox_1_12_alpha = 'https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/refs/heads/main/Config/singbox-1.12.X.alpha.json';
 export const beiantext = base64DecodeUtf8('6JCMSUNQ5aSHMjAyNTAwMDHlj7c=');
