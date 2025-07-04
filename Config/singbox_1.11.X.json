@@ -164,11 +164,11 @@
                 "outbound": "🎯 全球直连"
             },
             {
-                "clash_mode": "direct",
+                "clash_mode": "直连",
                 "outbound": "🎯 全球直连"
             },
             {
-                "clash_mode": "global",
+                "clash_mode": "全局",
                 "outbound": "🚀 节点选择"
             },
             {
