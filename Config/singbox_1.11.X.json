@@ -24,7 +24,7 @@
     "cache_file": {
       "enabled": true,
       "path": "cache.db",
-      "store_fakeip": true
+      "store_fakeip": false
     }
   },
   "dns": {
@@ -88,8 +88,8 @@
     "disable_cache": true,
     "disable_expire": true,
     "independent_cache": true,
-    "final": "PROXY-DNS",
-    "strategy": "prefer_ipv4"
+    "final": "DIRECT-DNS",
+    "strategy": "ipv4_only"
   },
   "inbounds": [
     {
@@ -116,7 +116,7 @@
     {
       "tag": "mixed-in",
       "type": "mixed",
-      "listen": "0.0.0.0",
+      "listen": "127.0.0.1",
       "listen_port": 20120,
       "sniffing": {
         "enabled": true,
