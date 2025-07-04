@@ -34,7 +34,11 @@
       "inet6_range": "fc00::/18"
     },
     "servers": [
-      { "tag": "local", "address": "local", "detour": "🎯 全球直连" },
+      {
+        "tag": "local",
+        "address": "local",
+        "detour": "🎯 全球直连"
+      },
       {
         "tag": "DIRECT-DNS",
         "address_resolver": "local",
@@ -47,18 +51,36 @@
         "address": "https://dns.google/dns-query",
         "detour": "🚀 节点选择"
       },
-      { "tag": "FAKEIP-DNS", "address": "fakeip" }
+      {
+        "tag": "FAKEIP-DNS",
+        "address": "fakeip"
+      }
     ],
     "rules": [
-      { "outbound": "any", "server": "DIRECT-DNS" },
-      { "clash_mode": "direct", "server": "DIRECT-DNS" },
-      { "clash_mode": "global", "server": "PROXY-DNS" },
       {
-        "rule_set": ["geosite-cn", "geosite-private"],
+        "outbound": "any",
         "server": "DIRECT-DNS"
       },
       {
-        "query_type": ["A", "AAAA"],
+        "clash_mode": "direct",
+        "server": "DIRECT-DNS"
+      },
+      {
+        "clash_mode": "global",
+        "server": "PROXY-DNS"
+      },
+      {
+        "rule_set": [
+          "geosite-cn",
+          "geosite-private"
+        ],
+        "server": "DIRECT-DNS"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
         "server": "FAKEIP-DNS",
         "rewrite_ttl": 1
       }
@@ -74,7 +96,10 @@
       "tag": "tun-in",
       "type": "tun",
       "interface_name": "singbox",
-      "address": ["172.18.0.1/30","fdfe:dcba:9876::1/126"],
+      "address": [
+        "172.18.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
       "mtu": 9000,
       "auto_route": true,
       "strict_route": true,
@@ -91,18 +116,22 @@
     {
       "tag": "mixed-in",
       "type": "mixed",
-      // 同时监听 IPv4 和 IPv6
       "listen": "0.0.0.0",
       "listen_port": 20120,
-      // **开启 HTTP/TLS 嗅探**，才能正确识别 CONNECT 和普通 HTTP
       "sniffing": {
         "enabled": true,
-        "dest_override": ["http", "tls"]
+        "dest_override": [
+          "http",
+          "tls"
+        ]
       }
     }
   ],
   "outbounds": [
-    { "tag": "🎯 全局直连", "type": "direct" },
+    {
+      "tag": "🎯 全局直连",
+      "type": "direct"
+    },
     {
       "tag": "🚫 拒绝连接",
       "type": "socks",
@@ -115,25 +144,38 @@
       "udp_over_tcp": false
     }
   ],
-  "route": {
+  "routing": {
     "auto_detect_interface": true,
     "final": "🚀 节点选择",
     "rules": [
-      // 先嗅探流量
-      { "action": "sniff" },
-      // 劫持 DNS 包到 fakeip 逻辑
+      {
+        "action": "sniff"
+      },
       {
         "type": "logical",
         "mode": "or",
-        "rules": [{ "port": [53] }, { "protocol": "dns" }],
+        "rules": [
+          {
+            "port": [53]
+          },
+          {
+            "protocol": "dns"
+          }
+        ],
         "action": "hijack-dns"
       },
-      // 私网直连
-      { "ip_is_private": true, "outbound": "🎯 全局直连" },
-      // Clash 模式分流
-      { "clash_mode": "direct", "outbound": "🎯 全局直连" },
-      { "clash_mode": "global", "outbound": "🚀 节点选择" },
-      // UDP 选项（可选）
+      {
+        "ip_is_private": true,
+        "outbound": "🎯 全局直连"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "🎯 全局直连"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "🚀 节点选择"
+      },
       {
         "action": "route-options",
         "udp_disable_domain_unmapping": true,
@@ -141,8 +183,9 @@
         "udp_timeout": "5m",
         "disable_cache": true
       },
-      // 最终解析
-      { "action": "resolve" }
+      {
+        "action": "resolve"
+      }
     ],
     "rule_set": [
       {
