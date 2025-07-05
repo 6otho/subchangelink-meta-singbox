@@ -17,7 +17,7 @@ direct: &direct { type: selector, interrupt_exist_connections: true, outbounds: 
 route:
   final: 🚀 节点选择
   rules:
-    - { domain: [ cdn.jsdmirror.com ], outbound: 🎯 全球直连 }
+    - { domain: [ gh.ikuu.eu.org ], outbound: 🎯 全球直连 }
     - { rule_set: [ AWAvenue-Ads ], outbound: 🪧 广告拦截 }
     - { type: logical, mode: or, rules: [ { port: [ 3478 ] }, { network: [ tcp ], port: [ 5349 ] }, { network: [ udp ], port: [ 5350, 5351, 19302 ] }, { rule_set: [ STUN ] } ], outbound: 💧 泄漏拦截 }
     - { rule_set: [ BlockHttpDNS ], outbound: 🔎 HttpDNS }
