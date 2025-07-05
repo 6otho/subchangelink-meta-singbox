@@ -1127,10 +1127,6 @@ export function configs() {
                         value: "https://raw.githubusercontent.com/6otho/singbox-Peizhi/refs/heads/main/singbox-1.11s.yaml"
                     },
                     {
-                        label: "默认（mini版）[DustinWin_ads]",
-                        value: "https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/main/template/singbox_default_mini_Ads_DustinWin.yaml"
-                    },
-                    {
                         label: "默认（全分组）[秋风_ads]",
                         value: "https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/main/template/singbox_default_full.yaml"
                     },
