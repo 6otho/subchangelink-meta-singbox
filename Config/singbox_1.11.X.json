@@ -177,7 +177,7 @@
             {
                 "tag": "geosite-private",
                 "type": "remote",
-                "url": "https://cdn.jsdmirror.com/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/private.srs",
+                "url": "hhttps://gh.ikuu.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/private.srs",
                 "format": "binary",
                 "download_detour": "🎯 全球直连"
             },
