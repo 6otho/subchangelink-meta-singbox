@@ -1128,11 +1128,11 @@ export function configs() {
                     },
                     {
                         label: "默认（全分组）[秋风_ads]",
-                        value: "https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/main/template/singbox_default_full.yaml"
+                        value: "https://raw.githubusercontent.com/6otho/subchangelink-meta-singbox/refs/heads/main/template/singbox_default_full.yaml"
                     },
                     {
                         label: "DustinWin 全分组版[ads]",
-                        value: "https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/main/template/singbox_DustinWin_full.yaml"
+                        value: "https://raw.githubusercontent.com/6otho/subchangelink-meta-singbox/refs/heads/main/template/singbox_DustinWin_full.yaml"
                     }
                 ]
             }
