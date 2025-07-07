@@ -119,7 +119,7 @@
   ],
     "outbounds": [
         {
-            "tag": "🎯 全局直连",
+            "tag": "🇨🇳 全局直连",
             "type": "direct"
         },
         {
