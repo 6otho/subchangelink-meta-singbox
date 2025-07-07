@@ -1124,7 +1124,7 @@ export function configs() {
                     },
                     {
                         label: "PAKO（mini版）[geo_ads]",
-                        value: "https://raw.githubusercontent.com/6otho/singbox-Peizhi/refs/heads/main/singbox-1.11s.yaml"
+                        value: "https://raw.githubusercontent.com/6otho/singbox-Peizhi/refs/heads/main/singbox-PaKo-mini.yaml"
                     },
                     {
                         label: "默认（全分组）[秋风_ads]",
