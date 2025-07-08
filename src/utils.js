@@ -997,27 +997,27 @@ export function configs() {
                 label: "通用",
                 options: [
                     {
-                        label: "默认（精简版）（仅国内外分流）[秋风_ads]",
+                        label: "DEF（精简版）（仅国内外分流）[秋风_ads]",
                         value: "https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/main/template/Mihomo_default.yaml"
                     },
                     {
-                        label: "默认（精简版）（仅国内外分流）[Dustinwin_ads]",
+                        label: "DEF（精简版）（仅国内外分流）[Dustinwin_ads]",
                         value: "https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/main/template/Mihomo_default_Ads_Dustinwin.yaml"
                     },
                     {
-                        label: "默认（精简版）（无去广告）",
+                        label: "DEF（精简版）（无去广告）",
                         value: "https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/main/template/Mihomo_default_NoAds.yaml"
                     },
                     {
-                        label: "默认（全分组）[秋风_ads]",
+                        label: "DEF（全分组）[秋风_ads]",
                         value: "https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/main/template/Mihomo_default_full.yaml"
                     },
                     {
-                        label: "默认（全分组）[Dustinwin_ads]",
+                        label: "DEF（全分组）[Dustinwin_ads]",
                         value: "https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/main/template/Mihomo_default_full_Ads_Dustinwin.yaml"
                     },
                     {
-                        label: "默认（全分组）（无去广告）",
+                        label: "DEF（全分组）（无去广告）",
                         value: "https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/main/template/Mihomo_default_full_NoAds.yaml"
                     }
                 ]
@@ -1055,9 +1055,13 @@ export function configs() {
                 label: "网络收集",
                 options: [
                     {
-                        label: "布丁狗的订阅转换 (与Github同步)",
-                        value: "https://raw.githubusercontent.com/mihomo-party-org/override-hub/main/yaml/%E5%B8%83%E4%B8%81%E7%8B%97%E7%9A%84%E8%AE%A2%E9%98%85%E8%BD%AC%E6%8D%A2.yaml"
+                        label: "PAKO (与Github同步)",
+                        value: "https://raw.githubusercontent.com/6otho/Yaml-PaKo/refs/heads/main/PAKO.yaml"
                     },
+                     {
+                        label: "PAKO_Caise (与Github同步)",
+                        value: "https://raw.githubusercontent.com/6otho/Yaml-PaKo/refs/heads/main/PAKO_urltest-CaiSe.yaml"
+                     },
                     {
                         label: "6D 自用模板 ",
                         value: "https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/main/template/Mihomo_6D_自用模板.yaml"
@@ -1119,15 +1123,15 @@ export function configs() {
                         value: "https://raw.githubusercontent.com/6otho/singbox-Peizhi/refs/heads/main/singbox-PaKo-mini.yaml"
                     },
                     {
-                        label: "默认（精简版）[秋风_ads]",
+                        label: "DEF（精简版）[秋风_ads]",
                         value: "https://raw.githubusercontent.com/6otho/subchangelink-meta-singbox/refs/heads/main/template/singbox_default.yaml"
                     },
 					{
-                        label: "默认（mini版）[geo_ads]",
+                        label: "DEF（mini版）[geo_ads]",
                         value: "https://raw.githubusercontent.com/6otho/subchangelink-meta-singbox/refs/heads/main/template/singbox_default_mini.yaml"
                     },
                     {
-                        label: "默认（全分组）[秋风_ads]",
+                        label: "DEF（全分组）[秋风_ads]",
                         value: "https://raw.githubusercontent.com/6otho/subchangelink-meta-singbox/refs/heads/main/template/singbox_default_full.yaml"
                     },
                     {
