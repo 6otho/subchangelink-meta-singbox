@@ -1120,7 +1120,7 @@ export function configs() {
                 options: [
                     {
                         label: "PAKO（mini版）[geo_ads]",
-                        value: "https://raw.githubusercontent.com/6otho/singbox-Peizhi/refs/heads/main/singbox-PaKo-mini.yaml"
+                        value: "https://raw.githubusercontent.com/6otho/singbox-Rule/refs/heads/main/singbox-PaKo-mini.yaml"
                     },
                     {
                         label: "DEF（精简版）[秋风_ads]",
