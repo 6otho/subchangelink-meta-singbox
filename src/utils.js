@@ -1115,16 +1115,16 @@ export function configs() {
                 label: "通用",
                 options: [
                     {
+                        label: "PAKO（mini版）[geo_ads]",
+                        value: "https://raw.githubusercontent.com/6otho/singbox-Peizhi/refs/heads/main/singbox-PaKo-mini.yaml"
+                    },
+                    {
                         label: "默认（精简版）[秋风_ads]",
                         value: "https://raw.githubusercontent.com/6otho/subchangelink-meta-singbox/refs/heads/main/template/singbox_default.yaml"
                     },
 					{
                         label: "默认（mini版）[geo_ads]",
                         value: "https://raw.githubusercontent.com/6otho/subchangelink-meta-singbox/refs/heads/main/template/singbox_default_mini.yaml"
-                    },
-                    {
-                        label: "PAKO（mini版）[geo_ads]",
-                        value: "https://raw.githubusercontent.com/6otho/singbox-Peizhi/refs/heads/main/singbox-PaKo-mini.yaml"
                     },
                     {
                         label: "默认（全分组）[秋风_ads]",
