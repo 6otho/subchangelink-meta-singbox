@@ -18,18 +18,25 @@ route:
   final: 🚀 节点选择
   rules:
     - { domain: [ cdn.jsdmirror.com ], outbound: 🎯 全球直连 }
-    - { rule_set: geosite-category-ads-all, outbound: 🪧 广告拦截 }
+    - { rule_set: [ geosite-category-ads-all ], outbound: 🪧 广告拦截 }
     - { type: logical, mode: or, rules: [ { port: [ 3478 ] }, { network: [ tcp ], port: [ 5349 ] }, { network: [ udp ], port: [ 5350, 5351, 19302 ] }, { rule_set: [ STUN ] } ], outbound: 💧 泄漏拦截 }
+    - { rule_set: [ geosite-private ], outbound: 🎯 全球直连 }
     - { rule_set: [ BlockHttpDNS ], outbound: 🔎 HttpDNS }
-    - { rule_set: [ geoip-google, geosite-google ], outbound: 🔍 Google }
-    - { rule_set: geosite-ai, outbound: 🤖 AI }
-    - { rule_set: geosite-youtube, outbound: 📹 YouTube }
-    - { rule_set: geosite-tiktok, outbound: 🎵 TikTok }
-    - { rule_set: [ geoip-telegram, geosite-telegram ], outbound: 📲 Telegram }
-    - { rule_set: [ geoip-netflix, geosite-netflix ], outbound: 🎥 Netflix }
     - { rule_set: [ geosite-microsoft ], outbound: 🪟 Microsoft }
-    - { rule_set: [ geoip-apple, geosite-apple ], outbound: 🍎 Apple }
-    - { rule_set: [ geoip-cn, geoip-private, geosite-private ], outbound: 🎯 全球直连 }
+    - { rule_set: [ geosite-ai ], outbound: 🤖 AI }
+    - { rule_set: [ geosite-youtube ], outbound: 📹 YouTube }
+    - { rule_set: [ geosite-tiktok ], outbound: 🎵 TikTok }
+    - { rule_set: [ geosite-telegram ], outbound: 📲 Telegram }
+    - { rule_set: [ geosite-netflix ], outbound: 🎥 Netflix }
+    - { rule_set: [ geosite-apple ], outbound: 🍎 Apple }
+    - { rule_set: [ geosite-google ], outbound: 🔍 Google }
+    - { action: resolve }
+    - { rule_set: [ geoip-telegram ], outbound: 📲 Telegram }
+    - { rule_set: [ geoip-netflix ], outbound: 🎥 Netflix }
+    - { rule_set: [ geoip-apple ], outbound: 🍎 Apple }
+    - { rule_set: [ geoip-google ], outbound: 🔍 Google }
+    - { rule_set: [ geoip-private, geoip-cn ], outbound: 🎯 全球直连 }
+
   rule_set:
   # MetaCubeX 规则集
   - { tag: geosite-category-ads-all, type: remote, format: binary, url: https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs, download_detour: 🎯 全球直连 }
